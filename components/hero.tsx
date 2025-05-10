@@ -139,7 +139,7 @@ export function Hero() {
       </motion.div>
 
       <div className="container relative z-10 px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0 }}
             animate={controls}
@@ -190,7 +190,7 @@ export function Hero() {
                 transition={{ duration: 0.5, delay: 0.4 }}
                 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight relative text-center lg:text-left"
               >
-                <span className="relative inline-block">
+                <span className="relative inline-block pb-4">
                   Ogunbiyi Amidat
                   <motion.span
                     initial={{ width: 0 }}

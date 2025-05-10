@@ -404,7 +404,7 @@ export function Navbar() {
             >
               <motion.div
                 variants={menuBackgroundVariants}
-                className="relative bg-card/80 backdrop-blur-md rounded-2xl border border-primary/10 shadow-xl overflow-hidden"
+                className="relative bg-champagne/90 dark:bg-card/80 backdrop-blur-md rounded-2xl border border-primary/10 shadow-xl overflow-hidden"
               >
                 {/* Decorative elements */}
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary/0 via-primary/30 to-primary/0" />

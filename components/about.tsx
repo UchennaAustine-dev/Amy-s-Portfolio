@@ -27,8 +27,8 @@ export function About() {
   };
 
   return (
-    <section id="about" className="py-20 relative">
-      <div className="container">
+    <section id="about" className="py-16 md:py-20 relative">
+      <div className="container px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
           initial="hidden"
@@ -36,31 +36,34 @@ export function About() {
           variants={containerVariants}
           className="max-w-6xl mx-auto"
         >
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <motion.div
               variants={itemVariants}
-              className="relative mx-auto lg:mx-0"
+              className="relative mx-auto lg:mx-0 w-full max-w-md"
             >
-              <div className="absolute -top-6 -left-6 w-24 h-24 border border-primary/30 rounded-lg" />
-              <div className="absolute -bottom-6 -right-6 w-24 h-24 border border-primary/30 rounded-lg" />
+              <div className="absolute -top-6 -left-6 w-16 h-16 sm:w-24 sm:h-24 border border-primary/30 rounded-lg hidden sm:block" />
+              <div className="absolute -bottom-6 -right-6 w-16 h-16 sm:w-24 sm:h-24 border border-primary/30 rounded-lg hidden sm:block" />
 
-              <Card className="overflow-hidden border-primary/20 max-w-md mx-auto">
+              <Card className="overflow-hidden border-primary/20 w-full">
                 <CardContent className="p-0">
-                  <div className="relative h-[400px] w-full">
+                  <div className="relative h-[300px] sm:h-[400px] w-full">
                     <Image
                       src="/placeholder.svg?height=400&width=400"
                       alt="About me"
                       fill
                       className="object-cover"
+                      sizes="(max-width: 640px) 100vw, (max-width: 768px) 80vw, (max-width: 1024px) 50vw, 400px"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent" />
-                    <div className="absolute bottom-0 left-0 right-0 p-6 text-center">
+                    <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 text-center">
                       <div className="flex items-center justify-center gap-2 text-sm text-primary/80 mb-2">
                         <span className="w-4 h-px bg-primary" />
                         <span>ABOUT ME</span>
                         <span className="w-4 h-px bg-primary" />
                       </div>
-                      <h2 className="text-3xl font-bold">My Journey</h2>
+                      <h2 className="text-2xl sm:text-3xl font-bold">
+                        My Journey
+                      </h2>
                     </div>
                   </div>
                 </CardContent>
@@ -76,11 +79,11 @@ export function About() {
                 <span>ABOUT ME</span>
                 <span className="w-8 h-px bg-primary hidden lg:block" />
               </div>
-              <h2 className="text-3xl font-bold mb-8">
+              <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8">
                 Building Robust Systems
               </h2>
 
-              <div className="space-y-4 text-lg text-foreground/80 max-w-xl mx-auto lg:mx-0">
+              <div className="space-y-4 text-base sm:text-lg text-foreground/80 max-w-xl mx-auto lg:mx-0">
                 <p>
                   I&apos;m a passionate Full Stack Software Developer with a
                   strong focus on backend development. I specialize in designing

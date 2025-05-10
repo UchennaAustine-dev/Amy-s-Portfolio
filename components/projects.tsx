@@ -43,7 +43,7 @@ export function Projects() {
                 animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Card className="h-full flex flex-col overflow-hidden group border-primary/10 hover:border-primary/30 transition-all duration-300">
+                <Card className="h-full flex flex-col overflow-hidden group border-primary/10 hover:border-primary/30 transition-all duration-300 bg-champagne/50 dark:bg-card">
                   <div className="relative overflow-hidden">
                     <Image
                       src={project.image || "/placeholder.svg"}
