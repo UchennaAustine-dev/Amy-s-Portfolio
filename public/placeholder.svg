@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title>Project placeholder</title>
+  <desc>Muted gradient placeholder illustration for projects without images.</desc>
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f4e9ff" />
+      <stop offset="50%" stop-color="#d8e5ff" />
+      <stop offset="100%" stop-color="#f8f9ff" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" rx="32" fill="url(#grad)" />
+  <g fill="none" stroke="#c6d3f5" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="220" y="220" width="760" height="360" rx="28" />
+    <path d="M320 520l150-180 120 140 100-120 190 190" />
+    <circle cx="750" cy="340" r="60" />
+  </g>
+  <text x="600" y="690" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="44" fill="#6b7280" text-anchor="middle" letter-spacing="2">Project preview coming soon</text>
+</svg>

@@ -70,8 +70,8 @@ export function Projects() {
               transition={{ delay: 0.2 }}
               className="text-lg text-foreground/60 max-w-2xl mx-auto"
             >
-              A selection of projects that demonstrate my expertise in backend
-              systems, APIs, and scalable data flows
+              A handful of builds I&apos;m proud of—lean APIs, data pipelines,
+              and services tuned to stay fast when real users show up.
             </motion.p>
           </div>
 

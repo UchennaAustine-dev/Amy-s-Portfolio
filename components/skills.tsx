@@ -160,8 +160,8 @@ export function Skills() {
               transition={{ delay: 0.2 }}
               className="text-lg text-foreground/60 max-w-2xl mx-auto"
             >
-              A comprehensive suite of technologies and tools I work with to
-              build exceptional applications
+              The tools I reach for when I&apos;m shipping APIs, keeping
+              services healthy, and getting signals when something feels off.
             </motion.p>
           </div>
 

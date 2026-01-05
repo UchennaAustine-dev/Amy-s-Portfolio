@@ -12,7 +12,7 @@ const experiences = [
     company: "Tech Innovations Ltd",
     period: "2022 - Present",
     description:
-      "Lead the backend development team in designing and implementing scalable microservices architecture. Optimized database performance and API response times, resulting in a 40% improvement in system throughput.",
+      "I lead a small backend crew, shaping services so product teams can ship without firefights. Most days are a mix of designing microservices, tuning databases, and keeping APIs quick when traffic jumps.",
     technologies: [
       "Node.js",
       "Python",
@@ -27,7 +27,7 @@ const experiences = [
     company: "Digital Solutions Inc",
     period: "2020 - 2022",
     description:
-      "Built and maintained RESTful APIs and event-driven services for client platforms. Implemented authentication, caching, and data processing pipelines while partnering with frontend teams for smooth integration.",
+      "Built REST and event-driven services for client apps—auth flows, caching layers, and data pipelines. Paired often with frontend teams so integrations stayed smooth instead of painful.",
     technologies: ["Node.js", "Express", "MongoDB", "Redis", "Docker", "CI/CD"],
   },
   {
@@ -35,7 +35,7 @@ const experiences = [
     company: "WebCraft Agency",
     period: "2018 - 2020",
     description:
-      "Built backend services and databases for web applications. Implemented payment processing integrations and automated reporting systems. Contributed to system architecture decisions and performance optimizations.",
+      "Designed backend guts for client sites: payment hooks, reporting jobs, and the data models that held it all together. Learned to balance speed, reliability, and budgets one release at a time.",
     technologies: ["Python", "Django", "MySQL", "RESTful APIs", "Git", "AWS"],
   },
 ];

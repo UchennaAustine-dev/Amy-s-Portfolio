@@ -62,9 +62,9 @@ export function About() {
               <div className="absolute -top-8 -left-8 w-20 h-20 sm:w-32 sm:h-32 border-2 border-primary/30 rounded-2xl hidden sm:block" />
               <div className="absolute -bottom-8 -right-8 w-16 h-16 sm:w-24 sm:h-24 border-2 border-primary/20 rounded-xl hidden sm:block" />
 
-              <Card className="overflow-hidden border-primary/20 w-full shadow-2xl hover:shadow-3xl transition-all duration-500 group">
-                <CardContent className="p-0">
-                  <div className="relative h-[300px] sm:h-[450px] w-full overflow-hidden bg-gradient-to-br from-primary/10 to-primary/5">
+              <Card className="overflow-hidden border-primary/20 w-full h-full shadow-2xl hover:shadow-3xl transition-all duration-500 group rounded-2xl">
+                <CardContent className="p-0 h-full">
+                  <div className="relative h-full min-h-[480px] w-full overflow-hidden bg-gradient-to-br from-primary/10 to-primary/5">
                     <Image
                       src="/OA.jpeg"
                       alt="Portrait of Ammy Ogunbiyi"
@@ -129,20 +129,21 @@ export function About() {
                   <span className="text-primary font-semibold">
                     Ammy Ogunbiyi
                   </span>
-                  , a backend developer based in Lagos, Nigeria. I design APIs,
-                  services, and data pipelines that stay reliable under load and
-                  evolve with business needs.
+                  , a backend developer in Lagos. I like taking rough sketches
+                  of ideas and turning them into APIs and data pipelines that
+                  stay calm when traffic spikes.
                 </p>
                 <p className="text-base leading-relaxed text-foreground/60">
-                  My journey in tech began with a fascination for building
-                  efficient systems. I specialize in TypeScript and Node.js for
-                  backend services, crafting observability-friendly APIs and
-                  resilient data flows that solve real-world problems.
+                  I grew up curious about how systems hold together, so I
+                  gravitated to TypeScript and Node.js for building services
+                  with clear logs, strong tests, and room to grow. I care about
+                  observability, sensible data models, and keeping things fast
+                  without getting fragile.
                 </p>
                 <p className="text-base leading-relaxed text-foreground/60">
-                  When I&apos;m not coding, you can find me exploring new
-                  technologies, contributing to open-source projects, or sharing
-                  knowledge with the dev community.
+                  Away from the keyboard, you&apos;ll find me tinkering with new
+                  tools, swapping ideas with other devs, or writing notes about
+                  what I learn so others can skip the potholes.
                 </p>
               </motion.div>
             </motion.div>

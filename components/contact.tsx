@@ -10,7 +10,9 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
 
-const CONTACT_EMAIL = "Ogunbiyiamidat65@gmail.com";
+const SEND_FEEDBACK_MS = 3200;
+
+const CONTACT_EMAIL = "ogunbiyiamidat65@gmail.com";
 
 export function Contact() {
   const [ref, inView] = useInView({
@@ -23,6 +25,7 @@ export function Contact() {
     email: "",
     message: "",
   });
+  const [status, setStatus] = useState<"idle" | "sending" | "sent">("idle");
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -34,6 +37,8 @@ export function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
+    setStatus("sending");
+
     const subject = encodeURIComponent(
       `Portfolio inquiry from ${formData.name || "someone"}`
     );
@@ -43,6 +48,9 @@ export function Contact() {
 
     window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
     setFormData({ name: "", email: "", message: "" });
+
+    window.setTimeout(() => setStatus("sent"), 300);
+    window.setTimeout(() => setStatus("idle"), SEND_FEEDBACK_MS);
   };
 
   return (
@@ -98,8 +106,8 @@ export function Contact() {
               transition={{ delay: 0.2 }}
               className="text-lg text-foreground/60 max-w-2xl mx-auto"
             >
-              Have a question or ready to start a project? Feel free to reach
-              out.
+              Tell me what you&apos;re building, what&apos;s slowing you down,
+              or the idea you scribbled last night. I read every note.
             </motion.p>
           </div>
 
@@ -115,58 +123,89 @@ export function Contact() {
                   <div className="space-y-8">
                     <div>
                       <h3 className="text-2xl md:text-3xl font-display font-bold mb-3">
-                        Contact Information
+                        Contact
                       </h3>
                       <p className="text-foreground/70 text-base leading-relaxed">
-                        I&apos;m always interested in hearing about new projects
-                        and opportunities. Let&apos;s discuss how I can help.
+                        Tell me the bottleneck you&apos;re facing—slow queries,
+                        a brittle service, or a launch you need to hit.
+                        I&apos;ll reply with a plan, not a sales pitch. I
+                        usually respond within one business day.
                       </p>
                     </div>
 
-                    <div className="space-y-5">
-                      <motion.div
-                        whileHover={{ x: 8 }}
-                        className="flex items-start gap-4"
+                    <motion.div
+                      whileHover={{ x: 8 }}
+                      className="flex items-start gap-4"
+                    >
+                      <div className="bg-primary/20 p-3 rounded-full">
+                        <Mail className="h-6 w-6 text-primary" />
+                      </div>
+                      <div>
+                        <h4 className="font-medium">Email</h4>
+                        <a
+                          className="text-foreground/70 underline underline-offset-4 decoration-primary/60 hover:text-primary transition-colors"
+                          href={`mailto:${CONTACT_EMAIL}`}
+                        >
+                          {CONTACT_EMAIL}
+                        </a>
+                      </div>
+                    </motion.div>
+
+                    <motion.div
+                      whileHover={{ x: 8 }}
+                      className="flex items-start gap-4"
+                    >
+                      <div className="bg-primary/20 p-3 rounded-full">
+                        <Phone className="h-6 w-6 text-primary" />
+                      </div>
+                      <div>
+                        <h4 className="font-medium">Phone</h4>
+                        <a
+                          className="text-foreground/70 underline underline-offset-4 decoration-primary/60 hover:text-primary transition-colors"
+                          href="https://wa.me/2347049201733"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          WhatsApp: 07049201733
+                        </a>
+                      </div>
+                    </motion.div>
+
+                    <motion.div
+                      whileHover={{ x: 8 }}
+                      className="flex items-start gap-4"
+                    >
+                      <div className="bg-primary/20 p-3 rounded-full">
+                        <MapPin className="h-6 w-6 text-primary" />
+                      </div>
+                      <div>
+                        <h4 className="font-medium">Location</h4>
+                        <p className="text-foreground/70">Lagos, Nigeria</p>
+                      </div>
+                    </motion.div>
+
+                    <div className="flex flex-wrap gap-3 pt-2">
+                      <Button
+                        asChild
+                        variant="outline"
+                        size="sm"
+                        className="border-primary/40 text-primary hover:bg-primary/10"
                       >
-                        <div className="bg-primary/20 p-3 rounded-full">
-                          <Mail className="h-6 w-6 text-primary" />
-                        </div>
-                        <div>
-                          <h4 className="font-medium">Email</h4>
-                          <a
-                            className="text-foreground/70 underline underline-offset-4 decoration-primary/60 hover:text-primary transition-colors"
-                            href={`mailto:${CONTACT_EMAIL}`}
-                          >
-                            {CONTACT_EMAIL}
-                          </a>
-                        </div>
-                      </motion.div>
-                      <motion.div
-                        whileHover={{ x: 8 }}
-                        className="flex items-start gap-4"
+                        <a href={`mailto:${CONTACT_EMAIL}`}>Email Ammy</a>
+                      </Button>
+                      <Button
+                        asChild
+                        size="sm"
+                        className="bg-primary text-white hover:bg-primary/90"
                       >
-                        <div className="bg-primary/20 p-3 rounded-full">
-                          <Phone className="h-6 w-6 text-primary" />
-                        </div>
-                        <div>
-                          <h4 className="font-medium">Phone</h4>
-                          <p className="text-foreground/70">
-                            +234 123 456 7890
-                          </p>
-                        </div>
-                      </motion.div>
-                      <motion.div
-                        whileHover={{ x: 8 }}
-                        className="flex items-start gap-4"
-                      >
-                        <div className="bg-primary/20 p-3 rounded-full">
-                          <MapPin className="h-6 w-6 text-primary" />
-                        </div>
-                        <div>
-                          <h4 className="font-medium">Location</h4>
-                          <p className="text-foreground/70">Lagos, Nigeria</p>
-                        </div>
-                      </motion.div>
+                        <a
+                          href="https://wa.me/2347049201733"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Chat on WhatsApp
+                        </a>
+                      </Button>
                     </div>
                   </div>
 
@@ -229,11 +268,22 @@ export function Contact() {
                     </div>
                     <Button
                       type="submit"
-                      className="w-full group bg-primary hover:bg-primary/90 text-white rounded-lg h-11 font-semibold"
+                      disabled={status === "sending"}
+                      className="w-full group bg-primary hover:bg-primary/90 text-white rounded-lg h-11 font-semibold disabled:opacity-70 disabled:cursor-not-allowed"
                     >
-                      Send Message
+                      {status === "sending"
+                        ? "Opening mail app..."
+                        : "Send Message"}
                       <Send className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                     </Button>
+
+                    {status === "sent" && (
+                      <p className="text-sm text-foreground/70 text-center">
+                        I opened your mail client. If it didn&apos;t open,
+                        please check your default mail app or message me on
+                        WhatsApp.
+                      </p>
+                    )}
                   </form>
                 </motion.div>
               </div>

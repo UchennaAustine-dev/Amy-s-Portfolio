@@ -209,14 +209,14 @@ export function Hero() {
               >
                 <div className="h-px w-24 bg-primary absolute top-1/2 -left-32 hidden lg:block" />
                 <p className="text-base sm:text-lg md:text-xl text-foreground/80 max-w-2xl text-center lg:text-left mx-auto lg:mx-0">
-                  A{" "}
+                  I&apos;m a{" "}
                   <span className="text-primary font-medium">
-                    Backend Software Developer
+                    backend engineer
                   </span>{" "}
-                  based in Lagos, Nigeria. I architect reliable APIs, data
-                  services, and distributed systems using TypeScript, Node.js,
-                  and modern cloud tooling. Passionate about building resilient
-                  platforms that scale.
+                  from Lagos who loves turning messy ideas into fast, reliable
+                  services. I spend my days shaping APIs, data flows, and
+                  distributed systems with TypeScript, Node.js, and cloud
+                  tools—always chasing that blend of stability and speed.
                 </p>
               </motion.div>
 
@@ -279,7 +279,7 @@ export function Hero() {
                   <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
                 </Link>
                 <Link
-                  href="mailto:ogunbiyiamidat65@gmail.com"
+                  href="mailto:Ogunbiyiamidat65@gmail.com"
                   className="text-foreground/70 hover:text-primary transition-colors relative group"
                 >
                   <Mail className="h-5 w-5 sm:h-6 sm:w-6" />
@@ -382,7 +382,7 @@ export function Hero() {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.5, delay: 1.2 }}
                   >
-                    OA
+                    AO
                   </motion.span>
                 </motion.div>
               </div>

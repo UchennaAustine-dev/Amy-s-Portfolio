@@ -61,8 +61,9 @@ export function Footer() {
                 Ammy Ogunbiyi
               </h3>
               <p className="text-primary-foreground/70 mb-6 text-sm sm:text-base">
-                Backend Software Developer focused on resilient APIs, data
-                services, and scalable systems with modern cloud tooling.
+                Backend developer who likes building APIs and data services that
+                feel dependable on busy days and easy to iterate on the quiet
+                ones.
               </p>
               <div className="flex items-center space-x-3 justify-center md:justify-start">
                 <Link
@@ -102,7 +103,7 @@ export function Footer() {
                   <span className="sr-only">Instagram</span>
                 </Link>
                 <Link
-                  href="mailto:Ogunbiyiamidat65@gmail.com"
+                  href="mailto:ogunbiyiamidat65@gmail.com"
                   className="bg-primary-foreground/10 p-2 sm:p-2.5 rounded-full text-primary-foreground/70 hover:text-primary-foreground hover:bg-primary-foreground/20 transition-colors"
                 >
                   <Mail className="h-4 w-4 sm:h-5 sm:w-5" />
@@ -218,12 +219,17 @@ export function Footer() {
               <div className="space-y-4 text-sm sm:text-base">
                 <p className="text-primary-foreground/70 flex items-start justify-center md:justify-start">
                   <Mail className="h-4 w-4 sm:h-5 sm:w-5 mr-3 mt-0.5 text-primary-foreground/70" />
-                  <span>example@example.com</span>
+                  <a
+                    href="mailto:ogunbiyiamidat65@gmail.com"
+                    className="hover:text-primary-foreground transition-colors"
+                  >
+                    ogunbiyiamidat65@gmail.com
+                  </a>
                 </p>
                 <p className="text-primary-foreground/70">
-                  Available for backend development projects and full-time
-                  positions. Let&apos;s collaborate on building scalable and
-                  efficient systems.
+                  Open to interesting backend work—shipping features, tuning
+                  performance, or untangling tricky bugs. If it makes a product
+                  smoother, I&apos;m in.
                 </p>
                 <div className="flex justify-center md:justify-start">
                   <Button
