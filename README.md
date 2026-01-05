@@ -1,10 +1,10 @@
-# Amy Ogunbiyi's Portfolio
+# Ammy Ogunbiyi's Portfolio
 
-A modern, responsive portfolio website showcasing my work as a Full Stack Software Developer.
+A modern, responsive portfolio website showcasing my work as a Backend Software Developer.
 
 ## About
 
-This portfolio is built with Next.js 15, TypeScript, and Tailwind CSS. It features a clean design with dark mode support and showcases my projects, skills, and experience.
+This portfolio is built with Next.js 15, TypeScript, and Tailwind CSS. It features a clean design with dark mode support and showcases my backend projects, skills, and experience.
 
 ## Tech Stack
 

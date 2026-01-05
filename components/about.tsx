@@ -66,11 +66,12 @@ export function About() {
                 <CardContent className="p-0">
                   <div className="relative h-[300px] sm:h-[450px] w-full overflow-hidden bg-gradient-to-br from-primary/10 to-primary/5">
                     <Image
-                      src="/placeholder.svg?height=450&width=400"
-                      alt="About me"
+                      src="/OA.jpeg"
+                      alt="Portrait of Ammy Ogunbiyi"
                       fill
                       className="object-cover group-hover:scale-110 transition-transform duration-700"
                       sizes="(max-width: 640px) 100vw, (max-width: 768px) 80vw, (max-width: 1024px) 50vw, 400px"
+                      priority
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
                     <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8 text-center backdrop-blur-sm">
@@ -126,17 +127,17 @@ export function About() {
                 <p className="text-lg leading-relaxed">
                   Hi, I&apos;m{" "}
                   <span className="text-primary font-semibold">
-                    Amy Ogunbiyi
+                    Ammy Ogunbiyi
                   </span>
-                  , a passionate Full Stack Developer based in Lagos, Nigeria. I
-                  love coding and am always excited to tackle new challenges in
-                  software development.
+                  , a backend developer based in Lagos, Nigeria. I design APIs,
+                  services, and data pipelines that stay reliable under load and
+                  evolve with business needs.
                 </p>
                 <p className="text-base leading-relaxed text-foreground/60">
                   My journey in tech began with a fascination for building
-                  efficient and scalable applications. I specialize in
-                  TypeScript for both frontend and backend development, creating
-                  robust systems that solve real-world problems.
+                  efficient systems. I specialize in TypeScript and Node.js for
+                  backend services, crafting observability-friendly APIs and
+                  resilient data flows that solve real-world problems.
                 </p>
                 <p className="text-base leading-relaxed text-foreground/60">
                   When I&apos;m not coding, you can find me exploring new

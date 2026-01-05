@@ -58,16 +58,15 @@ export function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 sm:gap-10 mb-10 sm:mb-12 text-center md:text-left">
             <div className="md:col-span-5">
               <h3 className="text-lg sm:text-xl font-bold mb-4">
-                Amy Ogunbiyi
+                Ammy Ogunbiyi
               </h3>
               <p className="text-primary-foreground/70 mb-6 text-sm sm:text-base">
-                Full Stack Software Developer specializing in backend
-                development, building robust and scalable systems with modern
-                technologies and cloud infrastructure.
+                Backend Software Developer focused on resilient APIs, data
+                services, and scalable systems with modern cloud tooling.
               </p>
               <div className="flex items-center space-x-3 justify-center md:justify-start">
                 <Link
-                  href="https://github.com"
+                  href="https://github.com/Amidathtc"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-primary-foreground/10 p-2 sm:p-2.5 rounded-full text-primary-foreground/70 hover:text-primary-foreground hover:bg-primary-foreground/20 transition-colors"
@@ -103,7 +102,7 @@ export function Footer() {
                   <span className="sr-only">Instagram</span>
                 </Link>
                 <Link
-                  href="mailto:example@example.com"
+                  href="mailto:Ogunbiyiamidat65@gmail.com"
                   className="bg-primary-foreground/10 p-2 sm:p-2.5 rounded-full text-primary-foreground/70 hover:text-primary-foreground hover:bg-primary-foreground/20 transition-colors"
                 >
                   <Mail className="h-4 w-4 sm:h-5 sm:w-5" />

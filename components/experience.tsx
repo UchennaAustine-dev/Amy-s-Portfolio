@@ -23,12 +23,12 @@ const experiences = [
     ],
   },
   {
-    title: "Full Stack Developer",
+    title: "Backend Developer",
     company: "Digital Solutions Inc",
     period: "2020 - 2022",
     description:
-      "Developed and maintained RESTful APIs and backend services for multiple client applications. Implemented authentication systems and data processing pipelines. Collaborated with frontend teams to ensure seamless integration.",
-    technologies: ["Node.js", "Express", "MongoDB", "Redis", "React", "CI/CD"],
+      "Built and maintained RESTful APIs and event-driven services for client platforms. Implemented authentication, caching, and data processing pipelines while partnering with frontend teams for smooth integration.",
+    technologies: ["Node.js", "Express", "MongoDB", "Redis", "Docker", "CI/CD"],
   },
   {
     title: "Software Engineer",

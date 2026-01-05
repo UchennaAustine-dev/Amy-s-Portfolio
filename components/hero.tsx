@@ -191,7 +191,7 @@ export function Hero() {
                 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight relative text-center lg:text-left"
               >
                 <span className="relative inline-block pb-4">
-                  Amy Ogunbiyi
+                  Ammy Ogunbiyi
                   <motion.span
                     initial={{ width: 0 }}
                     animate={{ width: "100%" }}
@@ -211,12 +211,12 @@ export function Hero() {
                 <p className="text-base sm:text-lg md:text-xl text-foreground/80 max-w-2xl text-center lg:text-left mx-auto lg:mx-0">
                   A{" "}
                   <span className="text-primary font-medium">
-                    Full Stack Software Developer
+                    Backend Software Developer
                   </span>{" "}
-                  based in Lagos, Nigeria. I love coding and specialize in
-                  building efficient applications using TypeScript, Node.js, and
-                  modern web technologies. Passionate about creating solutions
-                  that make a difference.
+                  based in Lagos, Nigeria. I architect reliable APIs, data
+                  services, and distributed systems using TypeScript, Node.js,
+                  and modern cloud tooling. Passionate about building resilient
+                  platforms that scale.
                 </p>
               </motion.div>
 
@@ -259,7 +259,7 @@ export function Hero() {
                 className="flex items-center gap-6 mt-10 justify-center lg:justify-start"
               >
                 <Link
-                  href="https://github.com"
+                  href="https://github.com/Amidathtc"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-foreground/70 hover:text-primary transition-colors relative group"
@@ -279,7 +279,7 @@ export function Hero() {
                   <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
                 </Link>
                 <Link
-                  href="mailto:example@example.com"
+                  href="mailto:ogunbiyiamidat65@gmail.com"
                   className="text-foreground/70 hover:text-primary transition-colors relative group"
                 >
                   <Mail className="h-5 w-5 sm:h-6 sm:w-6" />

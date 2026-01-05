@@ -10,6 +10,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
 
+const CONTACT_EMAIL = "Ogunbiyiamidat65@gmail.com";
+
 export function Contact() {
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -31,9 +33,16 @@ export function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log(formData);
+
+    const subject = encodeURIComponent(
+      `Portfolio inquiry from ${formData.name || "someone"}`
+    );
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+    );
+
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
     setFormData({ name: "", email: "", message: "" });
-    alert("Message sent successfully!");
   };
 
   return (
@@ -124,9 +133,12 @@ export function Contact() {
                         </div>
                         <div>
                           <h4 className="font-medium">Email</h4>
-                          <p className="text-foreground/70">
-                            Ogunbiyiamidat65@gmail.com
-                          </p>
+                          <a
+                            className="text-foreground/70 underline underline-offset-4 decoration-primary/60 hover:text-primary transition-colors"
+                            href={`mailto:${CONTACT_EMAIL}`}
+                          >
+                            {CONTACT_EMAIL}
+                          </a>
                         </div>
                       </motion.div>
                       <motion.div

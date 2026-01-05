@@ -19,9 +19,9 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Amy Ogunbiyi | Full Stack Developer", // cspell:ignore Ogunbiyi
+  title: "Ammy Ogunbiyi | Backend Developer", // cspell:ignore Ogunbiyi
   description:
-    "Full Stack Software Developer passionate about coding, specializing in TypeScript, backend development, and modern web applications",
+    "Backend Software Developer crafting resilient APIs, data services, and scalable systems with TypeScript, Node.js, and cloud tooling",
 };
 
 export default function RootLayout({

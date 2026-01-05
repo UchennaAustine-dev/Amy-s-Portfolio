@@ -70,8 +70,8 @@ export function Projects() {
               transition={{ delay: 0.2 }}
               className="text-lg text-foreground/60 max-w-2xl mx-auto"
             >
-              A selection of projects that demonstrate my expertise in
-              full-stack development and problem solving
+              A selection of projects that demonstrate my expertise in backend
+              systems, APIs, and scalable data flows
             </motion.p>
           </div>
 
