@@ -17,69 +17,113 @@ export function Projects() {
   });
 
   return (
-    <section id="projects" className="py-20 bg-muted/30">
-      <div className="container px-4 sm:px-6 lg:px-8">
+    <section
+      id="projects"
+      className="py-24 md:py-32 relative overflow-hidden bg-gradient-to-b from-background via-primary/2 to-background"
+    >
+      {/* Decorative background elements */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1.5 }}
+          className="absolute -top-40 right-20 w-96 h-96 rounded-full bg-primary/10 blur-3xl"
+        />
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1.5, delay: 0.2 }}
+          className="absolute -bottom-40 left-20 w-80 h-80 rounded-full bg-primary/8 blur-3xl"
+        />
+      </div>
+
+      <div className="container px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           ref={ref}
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.5 }}
-          className="max-w-6xl mx-auto"
+          initial={{ opacity: 0, y: 30 }}
+          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.6 }}
+          className="max-w-7xl mx-auto"
         >
-          <div className="text-center mb-16">
-            <div className="flex items-center justify-center gap-2 text-sm text-primary/80 mb-2">
-              <span className="w-8 h-px bg-primary" />
-              <span>PROJECTS</span>
-              <span className="w-8 h-px bg-primary" />
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold">Featured Work</h2>
+          <div className="text-center mb-20">
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              className="flex items-center justify-center gap-2 text-xs sm:text-sm font-semibold text-primary/80 mb-4 uppercase tracking-widest"
+            >
+              <span className="w-8 h-px bg-gradient-to-r from-primary to-transparent" />
+              <span>Featured Projects</span>
+              <span className="w-8 h-px bg-gradient-to-l from-primary to-transparent" />
+            </motion.div>
+            <motion.h2
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.15 }}
+              className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-4 max-w-3xl mx-auto leading-tight"
+            >
+              Showcase of Work
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="text-lg text-foreground/60 max-w-2xl mx-auto"
+            >
+              A selection of projects that demonstrate my expertise in
+              full-stack development and problem solving
+            </motion.p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto">
             {projects.map((project, index) => (
               <motion.div
                 key={project.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
+                animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
+                whileHover={{ y: -12 }}
+                className="group"
               >
-                <Card className="h-full flex flex-col overflow-hidden group border-primary/10 hover:border-primary/30 transition-all duration-300 bg-champagne/50 dark:bg-card">
-                  <div className="relative overflow-hidden">
+                <Card className="h-full flex flex-col overflow-hidden border-2 border-primary/10 hover:border-primary/30 hover:shadow-2xl transition-all duration-400 bg-gradient-to-br from-background to-primary/2 dark:from-card dark:to-primary/5 backdrop-blur-sm">
+                  <div className="relative overflow-hidden bg-gradient-to-br from-primary/10 to-primary/5 aspect-video">
                     <Image
                       src={project.image || "/placeholder.svg"}
                       alt={project.title}
                       width={600}
                       height={400}
-                      className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-115 group-hover:rotate-1"
                       sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 400px"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4 sm:p-6">
-                      <div className="flex gap-2">
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400 flex items-end p-4 sm:p-6 backdrop-blur-sm">
+                      <div className="flex gap-3 w-full">
                         <Button
                           asChild
                           variant="outline"
                           size="sm"
-                          className="bg-background/80 backdrop-blur-sm"
+                          className="flex-1 bg-background/90 backdrop-blur-sm border border-foreground/30 hover:border-primary text-foreground hover:text-primary text-xs sm:text-sm"
                         >
                           <Link
                             href={project.githubUrl}
                             target="_blank"
                             rel="noopener noreferrer"
                           >
-                            <Github className="mr-2 h-4 w-4" /> Code
+                            <Github className="mr-1.5 h-3.5 w-3.5 sm:h-4 sm:w-4" />{" "}
+                            Code
                           </Link>
                         </Button>
                         <Button
                           asChild
                           size="sm"
-                          className="bg-primary/80 backdrop-blur-sm"
+                          className="flex-1 bg-primary/90 hover:bg-primary text-white backdrop-blur-sm text-xs sm:text-sm"
                         >
                           <Link
                             href={project.liveUrl}
                             target="_blank"
                             rel="noopener noreferrer"
                           >
-                            <ExternalLink className="mr-2 h-4 w-4" /> Demo
+                            <ExternalLink className="mr-1.5 h-3.5 w-3.5 sm:h-4 sm:w-4" />{" "}
+                            Demo
                           </Link>
                         </Button>
                       </div>

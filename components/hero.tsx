@@ -37,7 +37,7 @@ export function Hero() {
     <section
       ref={containerRef}
       id="home"
-      className="relative min-h-screen flex items-center justify-center pt-20 pb-20 overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center pt-16 pb-20 overflow-hidden bg-gradient-to-br from-background via-background to-primary/5"
     >
       {/* Animated background elements */}
       <div className="absolute inset-0 pointer-events-none">
@@ -179,7 +179,7 @@ export function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
-                className="text-lg md:text-xl text-primary mb-3 font-mono text-center lg:text-left"
+                className="text-lg md:text-xl text-primary/80 mb-3 font-medium text-center lg:text-left"
               >
                 Hello, I&apos;m
               </motion.p>
@@ -191,7 +191,7 @@ export function Hero() {
                 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight relative text-center lg:text-left"
               >
                 <span className="relative inline-block pb-4">
-                  Ogunbiyi Amidat
+                  Amy Ogunbiyi
                   <motion.span
                     initial={{ width: 0 }}
                     animate={{ width: "100%" }}
@@ -213,10 +213,10 @@ export function Hero() {
                   <span className="text-primary font-medium">
                     Full Stack Software Developer
                   </span>{" "}
-                  based in Nigeria, with a strong focus on backend development.
-                  I specialize in building robust, scalable systems and APIs
-                  using Node.js, Python, and cloud technologies. I write{" "}
-                  <span className="text-primary font-medium">blogs</span> too.
+                  based in Lagos, Nigeria. I love coding and specialize in
+                  building efficient applications using TypeScript, Node.js, and
+                  modern web technologies. Passionate about creating solutions
+                  that make a difference.
                 </p>
               </motion.div>
 

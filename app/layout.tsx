@@ -1,26 +1,27 @@
 import type React from "react";
 import type { Metadata } from "next";
-import { Inconsolata, Lato } from "next/font/google";
+import { Playfair_Display, Poppins } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 
-const inconsolata = Inconsolata({
+const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
-  variable: "--font-inconsolata",
+  variable: "--font-display",
   display: "swap",
+  weight: ["400", "500", "600", "700", "800"],
 });
 
-const lato = Lato({
+const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["400", "700", "900"],
-  variable: "--font-lato",
+  weight: ["300", "400", "500", "600", "700", "800"],
+  variable: "--font-sans",
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Ogunbiyi Amidat | Full Stack Developer",
+  title: "Amy Ogunbiyi | Full Stack Developer", // cspell:ignore Ogunbiyi
   description:
-    "Full Stack Software Developer specializing in backend development, APIs, and cloud infrastructure",
+    "Full Stack Software Developer passionate about coding, specializing in TypeScript, backend development, and modern web applications",
 };
 
 export default function RootLayout({
@@ -30,7 +31,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inconsolata.variable} ${lato.variable} font-sans`}>
+      <body
+        className={`${playfairDisplay.variable} ${poppins.variable} font-sans`}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

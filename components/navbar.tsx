@@ -225,7 +225,7 @@ export function Navbar() {
           "--background-rgb": scrolled
             ? "var(--background)"
             : "var(--background)",
-        } as any
+        } as any // eslint-disable-line @typescript-eslint/no-explicit-any
       }
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-md ${
         scrolled ? "py-2 shadow-lg border-b border-primary/10" : "py-3 sm:py-4"

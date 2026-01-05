@@ -24,10 +24,9 @@ export async function generateStaticParams() {
 export default async function ProjectPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  // Integrate the parameter resolution code
-  const resolvedParams = await Promise.resolve(params);
+  const resolvedParams = await params;
   const slug = resolvedParams.slug;
 
   const project = projects.find((p) => p.slug === slug);

@@ -58,7 +58,7 @@ export function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 sm:gap-10 mb-10 sm:mb-12 text-center md:text-left">
             <div className="md:col-span-5">
               <h3 className="text-lg sm:text-xl font-bold mb-4">
-                Ogunbiyi Amidat
+                Amy Ogunbiyi
               </h3>
               <p className="text-primary-foreground/70 mb-6 text-sm sm:text-base">
                 Full Stack Software Developer specializing in backend
@@ -223,7 +223,7 @@ export function Footer() {
                 </p>
                 <p className="text-primary-foreground/70">
                   Available for backend development projects and full-time
-                  positions. Let's collaborate on building scalable and
+                  positions. Let&apos;s collaborate on building scalable and
                   efficient systems.
                 </p>
                 <div className="flex justify-center md:justify-start">
