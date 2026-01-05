@@ -47,9 +47,9 @@ export function Footer() {
               onClick={scrollToTop}
               variant="outline"
               size="icon"
-              className="rounded-full border-primary-foreground/20 hover:bg-primary-foreground/10 hover:border-primary-foreground/30 group"
+              className="rounded-full border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground/10 hover:border-primary-foreground/60 group bg-transparent"
             >
-              <ArrowUp className="h-5 w-5 group-hover:text-primary-foreground/80 transition-colors" />
+              <ArrowUp className="h-5 w-5 text-primary-foreground group-hover:text-primary-foreground transition-colors" />
               <span className="sr-only">Back to top</span>
             </Button>
           </div>
@@ -230,7 +230,7 @@ export function Footer() {
                   <Button
                     asChild
                     variant="outline"
-                    className="rounded-full border-primary-foreground/20 hover:bg-primary-foreground/10 hover:border-primary-foreground/30 text-primary-foreground"
+                    className="rounded-full border-primary-foreground/40 hover:bg-primary-foreground/10 hover:border-primary-foreground/60 text-primary-foreground bg-transparent"
                   >
                     <Link
                       href="#contact"
