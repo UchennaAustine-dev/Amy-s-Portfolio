@@ -279,7 +279,7 @@ export function Hero() {
                   <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
                 </Link>
                 <Link
-                  href="mailto:Ogunbiyiamidat65@gmail.com"
+                  href="mailto:ogunbiyiamidat65@gmail.com"
                   className="text-foreground/70 hover:text-primary transition-colors relative group"
                 >
                   <Mail className="h-5 w-5 sm:h-6 sm:w-6" />

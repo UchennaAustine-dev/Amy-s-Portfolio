@@ -62,14 +62,15 @@ export function About() {
               <div className="absolute -top-8 -left-8 w-20 h-20 sm:w-32 sm:h-32 border-2 border-primary/30 rounded-2xl hidden sm:block" />
               <div className="absolute -bottom-8 -right-8 w-16 h-16 sm:w-24 sm:h-24 border-2 border-primary/20 rounded-xl hidden sm:block" />
 
-              <Card className="overflow-hidden border-primary/20 w-full h-full shadow-2xl hover:shadow-3xl transition-all duration-500 group rounded-2xl">
-                <CardContent className="p-0 h-full">
-                  <div className="relative h-full min-h-[480px] w-full overflow-hidden bg-gradient-to-br from-primary/10 to-primary/5">
+              <Card className="overflow-hidden border-primary/20 w-full shadow-2xl hover:shadow-3xl transition-all duration-500 group rounded-2xl">
+                <CardContent className="p-0">
+                  <div className="relative w-full aspect-[3/4] overflow-hidden bg-gradient-to-br from-primary/10 to-primary/5">
                     <Image
                       src="/OA.jpeg"
                       alt="Portrait of Ammy Ogunbiyi"
                       fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-700"
+                      className="object-cover object-center group-hover:scale-110 transition-transform duration-700"
+                      style={{ objectPosition: "center 20%" }}
                       sizes="(max-width: 640px) 100vw, (max-width: 768px) 80vw, (max-width: 1024px) 50vw, 400px"
                       priority
                     />
