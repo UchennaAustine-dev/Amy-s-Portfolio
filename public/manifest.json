@@ -1,0 +1,17 @@
+{
+  "name": "Ammy Ogunbiyi - Backend Developer",
+  "short_name": "Ammy's Portfolio",
+  "description": "Backend Software Developer crafting resilient APIs, data services, and scalable systems with TypeScript, Node.js, and cloud tooling.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "32x32",
+      "type": "image/x-icon"
+    }
+  ]
+}

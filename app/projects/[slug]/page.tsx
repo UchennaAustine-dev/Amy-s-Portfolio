@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -19,6 +20,56 @@ export async function generateStaticParams() {
   return projects.map((project) => ({
     slug: project.slug,
   }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const resolvedParams = await params;
+  const project = projects.find((p) => p.slug === resolvedParams.slug);
+
+  if (!project) {
+    return {
+      title: "Project Not Found",
+      description: "The project you're looking for doesn't exist.",
+    };
+  }
+
+  return {
+    title: `${project.title} | Ammy Ogunbiyi - Backend Developer`,
+    description: project.description,
+    keywords: [
+      ...project.technologies,
+      project.category,
+      project.primaryLanguage,
+    ],
+    openGraph: {
+      type: "website",
+      locale: "en_US",
+      url: `https://www.amidat.tech/projects/${project.slug}`,
+      siteName: "Ammy Ogunbiyi - Backend Developer",
+      title: `${project.title} | Backend Developer Project`,
+      description: project.description,
+      images: [
+        {
+          url: project.image,
+          width: 1200,
+          height: 630,
+          alt: project.title,
+          type: "image/svg+xml",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${project.title} | Ammy Ogunbiyi`,
+      description: project.description,
+      creator: "@amidathtc",
+      images: [project.image],
+    },
+  };
 }
 
 export default async function ProjectPage({
