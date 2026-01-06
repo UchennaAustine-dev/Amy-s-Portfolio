@@ -9,6 +9,7 @@ import {
   ArrowUp,
   Twitter,
   Instagram,
+  BookOpen,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -101,6 +102,15 @@ export function Footer() {
                 >
                   <Instagram className="h-4 w-4 sm:h-5 sm:w-5" />
                   <span className="sr-only">Instagram</span>
+                </Link>
+                <Link
+                  href="https://medium.com/@ogunbiyiamidat"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-primary-foreground/10 p-2 sm:p-2.5 rounded-full text-primary-foreground/70 hover:text-primary-foreground hover:bg-primary-foreground/20 transition-colors"
+                >
+                  <BookOpen className="h-4 w-4 sm:h-5 sm:w-5" />
+                  <span className="sr-only">Medium Blog</span>
                 </Link>
                 <Link
                   href="mailto:ogunbiyiamidat65@gmail.com"

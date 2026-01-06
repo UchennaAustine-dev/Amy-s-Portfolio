@@ -12,6 +12,7 @@ import {
   Database,
   Server,
   Code,
+  BookOpen,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -284,6 +285,16 @@ export function Hero() {
                 >
                   <Mail className="h-5 w-5 sm:h-6 sm:w-6" />
                   <span className="sr-only">Email</span>
+                  <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
+                </Link>
+                <Link
+                  href="https://medium.com/@ogunbiyiamidat"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-foreground/70 hover:text-primary transition-colors relative group"
+                >
+                  <BookOpen className="h-5 w-5 sm:h-6 sm:w-6" />
+                  <span className="sr-only">Medium Blog</span>
                   <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
                 </Link>
               </motion.div>
