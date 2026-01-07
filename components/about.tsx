@@ -62,7 +62,7 @@ export function About() {
               <div className="absolute -top-8 -left-8 w-20 h-20 sm:w-32 sm:h-32 border-2 border-primary/30 rounded-2xl hidden sm:block" />
               <div className="absolute -bottom-8 -right-8 w-16 h-16 sm:w-24 sm:h-24 border-2 border-primary/20 rounded-xl hidden sm:block" />
 
-              <Card className="overflow-hidden border-primary/20 w-full shadow-2xl hover:shadow-3xl transition-all duration-500 group rounded-2xl">
+              <Card className="overflow-hidden border-primary/20 w-full shadow-2xl hover:shadow-3xl transition-all duration-500 group rounded-2xl p-0">
                 <CardContent className="p-0">
                   <div className="relative w-full aspect-[3/4] overflow-hidden bg-gradient-to-br from-primary/10 to-primary/5">
                     <Image
